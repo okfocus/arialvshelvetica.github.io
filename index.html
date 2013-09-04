@@ -20,9 +20,9 @@ Site by OKFocus, 100% Internet Legends
 	<link rel="shortcut icon" href="http://okfoc.us/assets/images/favicon.ico"/>
 	<meta property="og:title" content="Arial VS. Helvetica"/>
 	<meta property="og:type" content="website"/>
-	<meta property="og:image" content="http://www.arialvshelvetica.com/icon.png" />
-	<link rel="image_src" href="http://www.arialvshelvetica.com/icon.png"/>
-	<meta property="og:url" content="http://www.arialvshelvetica.com"/>
+	<meta property="og:image" content="http://arialvshelvetica.com/icon.png" />
+	<link rel="image_src" href="http://arialvshelvetica.com/icon.png"/>
+	<meta property="og:url" content="http://arialvshelvetica.com"/>
 	<meta property="og:site_name" content="Arial VS. Helvetica" />
 	<title>Arial VS. Helvetica</title>
 	<style type="text/css">
@@ -67,8 +67,26 @@ Site by OKFocus, 100% Internet Legends
 			ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&amp;*()[]{}\|;:'",./&lt;&gt;?<br>
 			<a href="http://okfoc.us">OKFocus</a>
 		</div>
-		<div class="fb-like" data-href="http://www.arialvshelvetica.com" data-width="80" data-layout="button_count" data-show-faces="true" data-send="false"></div>
-		<div class="video" style="width: 640px; height: 360px; overflow: hidden; position: fixed;top:-800000px;"><iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="okplayer" width="640" height="360" style="position: absolute; top: 0px; left: 0px; width: 640px; height: 360px;" src="http://youtube.com/embed/RubBzkZzpUA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;rel=0&amp;playlist=RubBzkZzpUA"></iframe></div>
+		<div class="fb-like" data-href="http://arialvshelvetica.com" data-width="80" data-layout="button_count" data-show-faces="true" data-send="false"></div>
+	<!--	<div class="video" style="width: 640px; height: 360px; overflow: hidden; position: fixed;top:-800000px;"><iframe frameborder="0" scrolling="no" seamless="seamless" webkitallowfullscreen="webkitAllowFullScreen" mozallowfullscreen="mozallowfullscreen" allowfullscreen="allowfullscreen" id="okplayer" width="640" height="360" style="position: absolute; top: 0px; left: 0px; width: 640px; height: 360px;" src="http://youtube.com/embed/RubBzkZzpUA?autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;iv_load_policy=3&amp;rel=0&amp;playlist=RubBzkZzpUA"></iframe></div>-->
+		<script type="text/javascript">
+		window.requestAnimFrame = (function(){
+			return  window.requestAnimationFrame       ||
+			window.webkitRequestAnimationFrame ||
+			window.mozRequestAnimationFrame    ||
+			function( callback ){
+				window.setTimeout(callback, 1000 / 60);
+			};
+			})();
+
+			var el = document.getElementById("flicker");
+			var on = false;
+			(function animate(){
+				requestAnimFrame(animate);
+				on = ! on;
+				el.className = on ? "on" : "";
+				})();
+				</script>
 	</body>
 
 	</html>
